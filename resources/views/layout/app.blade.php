@@ -13,9 +13,27 @@
     <!--FontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
         .dt-button {
             padding: 0;
             border: none;
+        }
+        h1,h2{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600
+        }
+        h3,h4,h5{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500
+        }
+        a{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400
+        }
+        p,td,label{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200
         }
     </style>
 </head>

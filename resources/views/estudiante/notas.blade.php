@@ -26,13 +26,13 @@
             <tr>
                 <td>{{ $nota->id }}</td>
                 <td>{{ $nota->nombreCurso }}</td>
-                <td>{{ $nota->nota1 }}</td>
-                <td>{{ $nota->nota2 }}</td>
-                <td>{{ $nota->nota3 }}</td>
-                <td>{{ $nota->nota4 }}</td>
-                <td>{{ $nota->parcial }}</td>
-                <td>{{ $nota->promedio }}</td>
-                <td>
+                <td align="end">{{ $nota->nota1 }}</td>
+                <td align="end">{{ $nota->nota2 }}</td>
+                <td align="end">{{ $nota->nota3 }}</td>
+                <td align="end">{{ $nota->nota4 }}</td>
+                <td align="end">{{ $nota->parcial }}</td>
+                <td align="end">{{ $nota->promedio }}</td>
+                <td align="center">
                     @if (6 < $nota->promedio)
                         Aprobado
                     @else

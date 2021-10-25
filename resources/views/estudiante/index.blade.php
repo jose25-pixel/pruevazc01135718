@@ -14,7 +14,7 @@
                 <th>#</th>
                 <th>Cursos</th>
                 <th>Ciclo</th>
-                <th>Acciones</th>
+                <th align="end">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -22,12 +22,12 @@
             <tr>
                 <td>{{ $curso->id }}</td>
                 <td>{{ $curso->nombreCurso }}</td>
-                <td>{{ $curso->ciclo.'-'.$curso->year }}</td>
-               <td>
+                <td align="end">{{ $curso->ciclo.'-'.$curso->year }}</td>
+               <td align="end">
                    <form action="{{ route('estudiante.store') }}" method="POST">
                         @csrf
                         <input type="hidden" name="curso_id" value="{{ $curso->id }}">
-                       <button type="submit" class="btn btn-info">Inscribirme</button>
+                       <button type="submit" class="btn btn-info">Inscribir <i class="fas fa-chalkboard-teacher"></i></button>
                    </form>
                 </td>
             </tr>
