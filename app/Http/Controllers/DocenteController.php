@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class DocenteController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('roles:1,2');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -26,20 +26,25 @@
                         </li>
                     @endif
                 @else
+                    @if (auth()->user()->hasRoles([1]))
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user.index') }}">{{ __('Usuarios') }}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('curso.index') }}">{{ __('Cursos') }}</a>
+                    </li>
+                    @endif
+                    @if (auth()->user()->hasRoles([1,2]))    
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('docente.index') }}">{{ __('Docentes') }}</a>
                     </li>
-
+                    @endif
+                    @if (auth()->user()->hasRoles([1,3]))    
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('estudiante.index') }}">{{ __('Estudiante') }}</a>
                     </li>
+                    @endif
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('curso.index') }}">{{ __('Cursos') }}</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->nombre }}
