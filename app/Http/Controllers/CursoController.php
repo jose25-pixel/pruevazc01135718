@@ -42,8 +42,14 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            "nombreCurso" => "required",
+            "year" => "required",
+            "ciclo" => "required",
+            "user_id" => "required"
+        ]);
         Curso::create(request()->all());
-        return redirect()->route('curso.index');
+        return redirect()->route('curso.index')->with('success',' Curso agregado exitosamente!!');
     }
 
     /**
@@ -78,9 +84,15 @@ class CursoController extends Controller
      */
     public function update(Curso $curso)
     {
+        request()->validate([
+            "nombreCurso" => "required",
+            "year" => "required",
+            "ciclo" => "required",
+            "user_id" => "required"
+        ]);
         $curso->update(request()->all());
 
-        return redirect()->route('curso.index');
+        return redirect()->route('curso.index')->with('success',' Curso actualizado!!');
     }
 
     /**
@@ -92,6 +104,6 @@ class CursoController extends Controller
     public function destroy(Curso $curso)
     {
         $curso->delete();
-        return redirect()->route('curso.index');
+        return redirect()->route('curso.index')->with('success',' Curso eliminado!!');
     }
 }

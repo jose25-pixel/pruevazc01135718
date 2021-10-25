@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{ config('Sistema', 'Sistema de notas') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -20,11 +20,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
-                    @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
+                    
                 @else
                     @if (auth()->user()->hasRoles([1]))
                     <li class="nav-item">
@@ -36,12 +32,12 @@
                     @endif
                     @if (auth()->user()->hasRoles([1,2]))    
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('docente.index') }}">{{ __('Docentes') }}</a>
+                        <a class="nav-link" href="{{ route('docente.index') }}">{{ __('Calificar') }}</a>
                     </li>
                     @endif
                     @if (auth()->user()->hasRoles([1,3]))    
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('estudiante.index') }}">{{ __('Estudiante') }}</a>
+                        <a class="nav-link" href="{{ route('estudiante.index') }}">{{ __('Cursos') }}</a>
                     </li>
                     @endif
                     

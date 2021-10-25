@@ -29,7 +29,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('administrador.addUser');
+        $user = new User();
+        return view('administrador.addUser', compact('user'));
     }
 
     /**
@@ -40,10 +41,22 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        request()->validate([
+            "nombre" => "required",
+            "apellido" => "required",
+            "fechaNacimiento" => "required",
+            "direccion" => "required",
+            "dui" => "required",
+            "genero" => "required",
+            "telefono" => "required",
+            "email" => "required",
+            "password" => "required",
+            "role_id" => "required",
+        ]);
         $user = request()->all();
         $user['password'] = bcrypt(request()->password);
         $user = User::create($user);
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success',' Usuario agregado con exito!!');
         
     }
 
@@ -64,9 +77,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('administrador.edit-user', compact('user'));
     }
 
     /**
@@ -76,9 +89,22 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $user)
     {
-        //
+        request()->validate([
+            "nombre" => "required",
+            "apellido" => "required",
+            "fechaNacimiento" => "required",
+            "direccion" => "required",
+            "dui" => "required",
+            "genero" => "required",
+            "telefono" => "required",
+            "email" => "required",
+            "password" => "required",
+            "role_id" => "required",
+        ]);
+        $user->update(request()->all());
+        return redirect()->route('user.index')->with('success',' Usuario fue modificado!!');
     }
 
     /**
@@ -87,8 +113,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('user.index')->with('success',' Usuario eliminado!');
     }
 }

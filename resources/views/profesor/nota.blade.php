@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Apartado de notas</h1>
-    <table class="table table-responsive-sm table-striped">
+    <table class="table table-responsive-sm table-striped" id="table_notas-docente">
         <thead>
             <tr>
                 <th>#</th>

@@ -4,8 +4,11 @@
 <div class="container">
     <h1>Apartado de estudiante</h1>
 
-    <a href="{{ route('estudiante.show') }}">Ver notas</a>
-    <table class="table table-responsive-sm table-striped">
+    <div class="d-flex justify-content-between my-3">
+        <h3>Asignaturas</h3>
+        <a class="btn btn-outline-success" href="{{ route('estudiante.show') }}">Ver notas</a>
+    </div>
+    <table class="table table-responsive-sm table-striped" id="table_id">
         <thead>
             <tr>
                 <th>#</th>

@@ -2,8 +2,11 @@
 @section('title','Nota - calificaciones')
 @section('content')
 <div class="container">
-    <h1>Apartado de notas</h1>
-    <table class="table table-responsive-sm table-striped">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Apartado de notas</h1>
+        <a href="{{ route('estudiante.index') }}" class="btn">Regresar</a>
+    </div>
+    <table class="table table-responsive-sm table-striped" id="table_notas">
         <thead>
             <tr>
                 <th>#</th>

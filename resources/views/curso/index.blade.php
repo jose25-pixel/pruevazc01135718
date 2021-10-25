@@ -14,16 +14,17 @@
                     <form action="{{ route('curso.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input name="nombreCurso" type="text" placeholder="Nombre del curso" class="form-control">
+                            <input name="nombreCurso" type="text" placeholder="Nombre del curso" class="form-control @error('nombreCurso') is-invalid @enderror">
+                            
                         </div>
                         <div class="form-group">
-                            <input name="year" type="number" min="1" placeholder="Año" class="form-control">
+                            <input name="year" type="number" min="1" placeholder="Año" class="form-control @error('year') is-invalid @enderror">
                         </div>
                         <div class="form-group">
-                            <input name="ciclo" type="number" min="1" max="2" placeholder="Ciclo" class="form-control">
+                            <input name="ciclo" type="number" min="1" max="2" placeholder="Ciclo" class="form-control @error('ciclo') is-invalid @enderror">
                         </div>
                         <div class="form-group">
-                            <select name="user_id" class="form-control">
+                            <select name="user_id" class="form-control @error('user_id') is-invalid @enderror">
                                 <option value="">Profesores</option>
                                 @foreach ($users as $user)
                                 <option value="{{ $user->id }}">{{ $user->nombre." ".$user->apellido }}</option>
@@ -37,7 +38,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <table class="table table-responsive-sm">
+            <table class="table table-responsive-sm" id="table_curso">
                 <thead align="center" class="thead-dark">
                     <tr>
                         <th>#</th>
