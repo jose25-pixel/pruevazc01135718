@@ -31,7 +31,14 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
+  $users = User::where('role_id',2)->get();
+
+
+        $curso = new Curso();
+
+       // $suppliers = Supplier::all(); Todos los proveedores
+
+        return view('curso.create',compact('users','curso'));
     }
 
     /**

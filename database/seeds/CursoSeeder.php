@@ -13,19 +13,19 @@ class CursoSeeder extends Seeder
     public function run()
     {
         DB::table('cursos')->insert([
-            "nombreCurso" => "Redes 1",
+            "nombreCurso" => "matematica",
             "year" => 2021,
             "ciclo" => 1,
             "user_id" => 2
         ]);
         DB::table('cursos')->insert([
-            "nombreCurso" => "Hacking etico",
+            "nombreCurso" => "Sociales",
             "year" => 2021,
             "ciclo" => 1,
             "user_id" => 2
         ]);
         DB::table('cursos')->insert([
-            "nombreCurso" => "Base de datos 2",
+            "nombreCurso" => "Lenguaje",
             "year" => 2021,
             "ciclo" => 1,
             "user_id" => 2

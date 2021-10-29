@@ -30,7 +30,7 @@ class UserController extends Controller
     public function create()
     {
         $user = new User();
-        return view('administrador.addUser', compact('user'));
+        return view('administrador.create', compact('user'));
     }
 
     /**
@@ -79,7 +79,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('administrador.edit-user', compact('user'));
+        return view('administrador.edit', compact('user'));
     }
 
     /**

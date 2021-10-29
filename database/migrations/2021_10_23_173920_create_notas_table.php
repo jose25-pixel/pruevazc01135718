@@ -15,12 +15,12 @@ class CreateNotasTable extends Migration
     {
         Schema::create('notas', function (Blueprint $table) {
             $table->id();
-            $table->decimal('nota1',8,2);
-            $table->decimal('nota2',8,2);
-            $table->decimal('nota3',8,2);
-            $table->decimal('nota4',8,2);
-            $table->decimal('parcial',8,2);
-            $table->decimal('promedio',8,2);
+            $table->decimal('nota1',5,2);
+            $table->decimal('nota2',5,2);
+            $table->decimal('nota3',5,2);
+            $table->decimal('nota4',5,2);
+            $table->decimal('parcial',5,2);
+            $table->decimal('promedio',5,2);
             $table->timestamps();
         });
     }

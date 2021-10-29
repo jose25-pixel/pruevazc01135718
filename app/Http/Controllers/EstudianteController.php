@@ -53,7 +53,7 @@ class EstudianteController extends Controller
             "curso_id" => request()->curso_id,
             "nota_id" => $nota->id
         ]);
-        return redirect()->route('estudiante.index')->with('success','Te has inscrito al curso!!');
+        return redirect()->route('estudiante.index')->with('exitoso','Te has inscrito al curso!!');
     }
 
     /**

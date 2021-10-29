@@ -16,16 +16,16 @@ class RolesSeederTable extends Seeder
         //DB::table('roles')->truncate();
         DB::table('roles')->insert([
             "role"=>"Administrador",
-            "descrip" => "Previlegios avanzados",
+            "descrip" => "Previlegios ",
         ]);
         
         DB::table('roles')->insert([
             "role"=>"Profesor",
-            "descrip" => "Previlegios avanzados",
+            "descrip" => "poder en los estudiantes",
         ]);
         DB::table('roles')->insert([
             "role"=>"Estudiante",
-            "descrip" => "Previlegios avanzados",
+            "descrip" => "consultar datos",
         ]);
     }
 }

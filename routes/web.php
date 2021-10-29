@@ -2,12 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-/**
- * ROUTES
- * 
- */
+/*ROUTES*/Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/','HomeController@index')->name('home');
+Route::get('/home','HomeController@index')->name('home');
 
 Route::get('/administrador','UsuariosController@index')->name('admin.index');
 
@@ -15,21 +14,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/***
- * VISTAS DE ADMINISTRADOR
- */
+/**** ***********************Vistas del adminitrador*******************************/
 Route::get('/usuario', 'UserController@index')->name('user.index');
-Route::get('/usuario/nuevo', 'UserController@create')->name('user.create');
+Route::get('/usuario/nue', 'UserController@create')->name('user.create');
 Route::post('/usuario', 'UserController@store')->name('user.store');
 Route::get('/usuario/edit/{user}', 'UserController@edit')->name('user.edit');
 Route::put('/usuario/{user}', 'UserController@update')->name('user.update');
 Route::delete('/usuario/{user}', 'UserController@destroy')->name('user.destroy');
 
-/**
- * 
- *CURSOS ROUTES 
- */
+
+/**** ***********************Vistas de cursos*******************************/
 Route::get('/cursos', 'CursoController@index')->name('curso.index');
+Route::get('/cursos/nue', 'CursoController@create')->name('curso.create');
 Route::post('/cursos', 'CursoController@store')->name('curso.store');
 Route::get('/cursos/edit/{curso}', 'CursoController@edit')->name('curso.edit');
 
@@ -37,10 +33,8 @@ Route::put('/cursos/{curso}', 'CursoController@update')->name('curso.update');
 
 Route::delete('/cursos/{curso}', 'CursoController@destroy')->name('curso.destroy');
 
-/**
- * PROFESOR
- * 
- */
+
+/**** ***********************Vistas del docente*******************************/
 
 Route::get('/docente', 'DocenteController@index')->name('docente.index');
 Route::post('/docente', 'DocenteController@store')->name('docente.store');

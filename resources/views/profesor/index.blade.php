@@ -1,10 +1,10 @@
 @extends('layout.app')
-@section('title','Docente')
+@section('title','Profesor')
 @section('content')
 <div class="container">
     <h1>Apartado de cursos</h1>
-    <table class="table table-responsive-sm table-striped">
-        <thead>
+    <table class="table table-responsive-sm table-striped table-hover text-center">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Cursos</th>
@@ -19,7 +19,7 @@
                 <td>{{ $curso->nombreCurso }}</td>
                 <td>{{ $curso->ciclo.'-'.$curso->year }}</td>
                <td>
-                    <a href="{{ route('nota.index',$curso) }}" class="btn btn-info">Notas</a>
+                    <a href="{{ route('nota.index',$curso) }}" class="btn btn-success">Calificar</a>
                 </td>
             </tr>
                 

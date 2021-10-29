@@ -1,23 +1,16 @@
 @extends('layout.app')
-<style>
-    .login-img{
-        height: 80vh;
-        width: 100%;
-        background-image: url('https://www.co-dex.eu/wp-content/uploads/2020/12/undraw_secure_login_pdn4.png');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
-</style>
+
 @section('content')
-<div class="container">
-    <div class="login-img">
-        <div class="row justify-content-end">
-            <div class="col-md-5">
-                <div class="card shadow-lg">
+<div class="container text-center">
+    <div class="row">
+        <div class="col-12 col-sm-10 col-lg-6 mx-auto  p-5">
+
+
+
                     <div class="card-header">{{ __('Ingresar') }}</div>
     
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+
+                        <form  class="bg-link shadow rounded py-3 px-4" method="POST" action="{{ route('login') }}">
                             @csrf
     
                             <div class="form-group row">
@@ -68,10 +61,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
 </div>
 @endsection

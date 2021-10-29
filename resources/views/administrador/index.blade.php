@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between">
-        <h2>Usuarios en el sistema de notas</h2>
-        <a class="btn btn-outline-success mb-3" href="{{ route('user.create') }}"><i class="fas fa-user-plus"></i></a>
+        <h2>Usuarios en el sistema </h2>
+        <a class="btn btn-outline-success mb-3" href="{{ route('user.create') }}">Agregar+ </a>
     </div>
-    <table class="table table-responsive-sm" id="table_usuario">
-        <thead>
+    <table class="table table-responsive-sm table table-hover" id="table_usuario">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Nombre completo</th>

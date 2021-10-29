@@ -85,7 +85,7 @@ class NotaController extends Controller
     {
         $data = request()->all();
 
-        //Calcular promedio
+     //promedio
 
         $promedio = (request()->nota1 + request()->nota2 + request()->nota3 + request()->nota4 + request()->parcial) / 5;
 

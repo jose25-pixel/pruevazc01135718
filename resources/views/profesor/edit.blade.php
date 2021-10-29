@@ -1,7 +1,7 @@
 @extends('layout.app')
-@section('title','Docente')
+@section('title','Profesor')
 @section('content')
-<div class="container">
+<div class="">
     <h1>Apartado de notas</h1>
     <table class="table table-responsive-sm table-striped">
         <thead>
@@ -25,11 +25,11 @@
                 <td>{{ $estudiante->nombre }}</td>
                 <form action="{{ route('nota.update',[$estudiante->nota_id,$estudiante->curso_id]) }}" method="POST">
                     @csrf @method('PUT')
-                    <td><input name="nota1" type="number" step="0.01" min="0" max="10" value="{{ $estudiante->nota1 }}"></td>
-                    <td><input name="nota2" type="number" step="0.01" min="0" max="10" value="{{ $estudiante->nota2 }}"></td>
-                    <td><input name="nota3" type="number" step="0.01" min="0" max="10" value="{{ $estudiante->nota3 }}"></td>
-                    <td><input name="nota4" type="number" step="0.01" min="0" max="10" value="{{ $estudiante->nota4 }}"></td>
-                    <td><input name="parcial" type="number" step="0.01" min="0" max="10" value="{{ $estudiante->parcial }}"></td>
+                    <td><input name="nota1" type="number"  value="{{ $estudiante->nota1 }}"></td>
+                    <td><input name="nota2" type="number"  value="{{ $estudiante->nota2 }}"></td>
+                    <td><input name="nota3" type="number"  value="{{ $estudiante->nota3 }}"></td>
+                    <td><input name="nota4" type="number"  value="{{ $estudiante->nota4 }}"></td>
+                    <td><input name="parcial" type="number"  value="{{ $estudiante->parcial }}"></td>
                     <td>{{ $estudiante->promedio }}</td>
                     <td>
                         <button type="submit" class="btn btn-outline-success">Actualizar</a>

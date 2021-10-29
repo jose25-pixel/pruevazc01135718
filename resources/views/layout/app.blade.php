@@ -43,7 +43,11 @@
         @include('partials.message')
         @yield('content')
     </div>
-    @include('partials.footer')
+     <footer class="bg-primary mt-4">
+    <div class="footer-content py-3">
+        <p class="text-center m-0 text-light">Sistemas de Notas | Jose Zabaleta</p>
+    </div>
+</footer>
     
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
@@ -149,7 +153,7 @@
             "lengthMenu": [[5, 10, 20,50, -1], [5, 10, 20,50, "All"]]
         });
     } );
-    //Table curso
+    //Table usuario
     $(document).ready( function () {
         $('#table_usuario').DataTable({
             "language": {

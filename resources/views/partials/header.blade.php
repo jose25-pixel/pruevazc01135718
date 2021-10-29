@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4">
+<nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm mb-4">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('Sistema', 'Sistema de notas') }}
+            CRUZCODE, Sistema de Notas
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                {{ __('Salir') }} <i class="fas fa-sign-out-alt"></i>
+                                {{ __('Cerrar Seccion') }}</i>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

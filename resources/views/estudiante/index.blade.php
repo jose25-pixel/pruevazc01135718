@@ -8,8 +8,8 @@
         <h3>Asignaturas</h3>
         <a class="btn btn-outline-success" href="{{ route('estudiante.show') }}">Ver notas</a>
     </div>
-    <table class="table table-responsive-sm table-striped" id="table_id">
-        <thead>
+    <table class="table table-responsive-sm table-striped table-hover" id="table_id">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Cursos</th>
@@ -27,7 +27,7 @@
                    <form action="{{ route('estudiante.store') }}" method="POST">
                         @csrf
                         <input type="hidden" name="curso_id" value="{{ $curso->id }}">
-                       <button type="submit" class="btn btn-info">Inscribir <i class="fas fa-chalkboard-teacher"></i></button>
+                       <button type="submit" class="btn btn-info">Inscribir </i></button>
                    </form>
                 </td>
             </tr>

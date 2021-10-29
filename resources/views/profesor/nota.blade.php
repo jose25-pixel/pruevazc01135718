@@ -1,10 +1,10 @@
 @extends('layout.app')
-@section('title','Docente')
+@section('title','Profesor')
 @section('content')
 <div class="container">
     <h1>Apartado de notas</h1>
-    <table class="table table-responsive-sm table-striped" id="table_notas-docente">
-        <thead>
+    <table class="table table-responsive-sm table-striped text-center" id="table_notas-docente">
+        <thead class="table-dark">
             <tr>
                 <th>#</th>
                 <th>Estudiantes</th>
@@ -30,7 +30,7 @@
                 <td>{{ $estudiante->parcial }}</td>
                 <td>{{ $estudiante->promedio }}</td>
                 <td>
-                    <a href="{{ route('nota.edit',$estudiante->nota_id) }}" class="btn btn-outline-secondary">Modificar</a>
+                    <a href="{{ route('nota.edit',$estudiante->nota_id) }}" class="btn btn-outline-success">Modificar</a>
                 </td>
             </tr>
             @endforeach
